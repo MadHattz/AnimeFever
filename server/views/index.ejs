@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!--CSS Files-->
+  <link rel='stylesheet' href='/Content/app.css' />
+  <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' /> <!--Setting boostrap theme, providing the path-->
+  <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
+  <!--To activate bootstarp u need a jQuery along with java script-->
+</head>
+<body>
+<!--This is how You Import A file/library-->
+<%- include partials/header.ejs %> <!--This includes the header file in partials folder-->
+<!--NavBar-->
+<%- include partials/main_nav.ejs %> 
+<!--Adding main_nav root in partials folder, notice it goes after the nav code-->
+<!---NavBar Code end-->
+
+<!--Main Content-->
+<main>
+<!--Homepage Main Content-->
+   <% if (title  == "HomePage") { %>
+          <%- include main/homepage.ejs %>
+   <%}%>
+   <%if (title == "Anime Fever") {%>
+           <%- include main/homepage.ejs %>
+   <% } %>
+   <%if (title == "Trending") {%>
+           <%- include main/trending.ejs %>
+   <% } %>
+    <%if (title == "Contact Me") {%>
+           <%- include main/contactme.ejs %>
+   <% } %>
+   %>
+</main>
+<!--Footer / Bottom Nav Bar-->
+<%- include partials/bottom_nav.ejs %> 
+
+  <!--Script Files-->
+<%- include partials/footer.ejs %> 
+</body>
+</html>
+

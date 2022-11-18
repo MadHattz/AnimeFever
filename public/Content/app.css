@@ -1,0 +1,206 @@
+@charset "UTF-8"; 
+/*Background color for all pages using linear gradient*/
+body{
+    background: linear-gradient(45deg,#7F6E75,#E2FEFF,#30BFCC); 
+    } 
+    /*padding for homepage banner*/
+    body .Banner{
+        background: linear-gradient(45deg,#7F6E75,#E2FEFF,#30BFCC); 
+        padding-top: 5%;
+    
+        } 
+        /*padding for top10 page banner*/
+.row{
+    background: linear-gradient(45deg,#7F6E75,#E2FEFF,#30BFCC); 
+    padding-top: 3%;
+}
+/*padding for edit and add banner*/
+.row2{
+    background: linear-gradient(45deg,#7F6E75,#E2FEFF,#30BFCC); 
+    padding-top: 15%;
+}
+/*nav bar change color when hovered on*/
+.nav-item:hover {
+
+    background-color:#4277C9;
+
+}
+/*header*/
+/*Banner for Home page*/
+.Banner header img{
+    height: 270px;
+}
+.Banner header h1,p{
+    justify-content: center;
+    text-align: center;
+}
+/*Banner for Trending page*/
+.Banner2 header img{
+    height: 400px;
+}
+.Banner2 header h6,p{
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+}
+/*Banner for Trending page/ niche section*/
+.Banner3 h6,p{
+    justify-content: center;
+    text-align: center;
+    font-size: large;
+}
+.manga p{
+    justify-content: center;
+    text-align: center;
+    color: black;
+    text-shadow: #000011;
+    font-family: fantasy;
+    text-size-adjust: 200%;
+}
+/*Banner for Add & Edit Page*/
+.Footer img{
+    height: 270px;
+}
+/*Banner for Home Page*/
+.Footer2 img{
+    height: 600px;
+}
+p{
+    color: #4247BF;
+    text-transform: uppercase;
+    font-family: fantasy;
+    text-shadow: #000011; 
+}
+/*applying font size and color to all text and images*/
+#main_text{
+    font-size: large;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    text-shadow: #000011;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/*applying positioning to wrapper on home page*/
+#wrapper{
+    font-size: large;
+    color: #4247BF;
+    text-align: center;
+    padding-top: 5%;
+    justify-content: center;
+    list-style: upper-alpha;
+    display: block;
+}
+#table{
+    font-size: large;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    list-style: upper-alpha;
+    display: block;
+}
+/*applying positioning to wrapper on trending page*/
+#wrapper2{
+    font-size: large;
+    color: #4247BF;
+    text-align: center;
+    padding-top: 1%;
+    justify-content: center;
+    list-style: upper-alpha;
+    display: block;
+}
+#formwrapper{
+    font-size: large;
+    color: #4247BF;
+    border-radius: 5%;
+    padding: 2%;
+    margin: 1.5rem;
+    list-style: upper-alpha;
+    display: block;
+    text-shadow: #000011;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+#Slideshow p{
+    color: gold;
+    text-transform: uppercase;
+    font-family: fantasy;
+    text-shadow: #000011;
+}
+/*move position of trending slideshow*/
+
+h1{
+    
+    color: #1116ac;
+    text-transform: uppercase;
+    font-family: fantasy;
+    text-shadow: #000011;
+}
+h2{
+    color: #BD7BF7;
+    text-transform: uppercase;
+    font-family: fantasy;
+    text-shadow: #000011;
+    display: block;
+}
+h3{
+    color: #FB8D3D;
+    text-transform: uppercase;
+    font-family: fantasy;   
+    text-shadow: #000011;
+    list-style: upper-alpha;
+}
+h4{
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-shadow: #000011;
+    list-style: upper-alpha;
+}
+h5{
+    color: gold;
+    font-family: fantasy; 
+    text-shadow: #000011;
+    display: block;
+}
+h6{
+    
+    color: #C0302F;
+    text-transform: uppercase;
+    font-family: fantasy;
+    text-shadow: #000011;
+    font-size: large;
+}
+#main_text h3 {
+    list-style: upper-alpha;
+    display: block;
+    color: #4247BF;
+    text-transform: uppercase;
+    font-family: fantasy;
+    text-shadow: #000011;
+}
+
+.video p{
+    text-shadow: #000011;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+.video{
+    font-size: large;
+    color: #4247BF;
+    text-align: center;
+    list-style: upper-alpha;
+    display: block;
+}
+
+#title{
+    text-align: center;
+}
+
+#title{
+    text-shadow: #000011;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+#reference{
+    list-style: none;
+}
+

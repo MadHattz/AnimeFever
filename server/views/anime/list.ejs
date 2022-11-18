@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!--CSS Files-->
+  <link rel='stylesheet' href='/Content/app.css' />
+  <link rel='stylesheet' href='/Content/list.css' />
+  <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' /> <!--Setting boostrap theme, providing the path-->
+  <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
+  <!--To activate bootstarp u need a jQuery along with java script-->
+</head>
+<body>
+<!--This is how You Import A file/library-->
+<%- include ../partials/header.ejs %> <!--This includes the header file in partials folder-->
+<!--NavBar-->
+<%- include ../partials/main_nav.ejs %> 
+<!--Adding main_nav root in partials folder, notice it goes after the nav code-->
+<!---NavBar Code end-->
+<div class="Banner2">
+<header >
+    <img src="Assets/animelogos.webp" class="img-fluid "style="width: 100%;" alt="Banner Img">
+</header>
+</div>
+<!--Main Content-->
+<main>
+<!--built in bootstrap-->
+<!--display queries in rows n columns-->
+<div class = "row">
+<div class = "table-responsive-md">
+    <div class= "col-md-offset-1 col-md-10">
+        <h1><%= title %></h1>
+        <a href="/animelist/add" class="btn btn-primary" role="button">
+        <i class="fa-solid fa-file-circle-plus"></i> Add an Anime</a>
+        <br>
+        <br>
+    <table class= "table-responsive table-bordered table-striped table-hover">
+    <div id ="table">
+    <thead>
+    <tr class="d-flex">
+        <th class="text-center col-2">Name</th>
+        <th class="text-center col-1">Genre</th>
+        <th class="text-center col-1">Rating</th>
+        <th class="text-center col-1">Seasons</th>
+        <th class="text-center col-1">Aired</th>
+        <th class="text-center col-6">Description</th>
+        <th class="text-center col-1"></th>
+        <th class="text-center col-1"></th>
+    </tr>
+    </thead>
+    <!--Need to repeat this table template by using 4loop-->
+    <% for(let count=0; count<AnimeList.length; count++) {%>
+    <tbody>
+        <tr class="d-flex">
+            <td class="text-center col-2"><%= AnimeList[count].Name %></td>
+            <td class="text-center col-1"><%= AnimeList[count].Genre %></td>
+            <td class="text-center col-1"><%= AnimeList[count].Rating %></td>
+            <td class="text-center col-1"><%= AnimeList[count].Seasons %></td>
+            <td class="text-center col-1"><%= AnimeList[count].Aired %></td>
+            <td class="text-center col-6"><%= AnimeList[count].Description %></td>
+            <td class="text-center col-1">
+                <a href="/animelist/edit/<%= AnimeList[count]._id %>"
+                    class="btn btn-primary" role="button"
+                    <i class="fas fa-pencil-alt"></i> Edit Anime</a>
+                </td>
+           <td class="text-center col-1">
+                <a href="/animelist/delete/<%= AnimeList[count]._id %>"
+                    class="btn btn-danger" role="button"
+                    <i class="fas fa-trash-alt"></i> Delete Anime</a>
+                </td>
+        </tr>
+    </tbody>
+    <% } %>
+    </table>
+    </div>
+    </div>
+</div>
+</div>
+</main>
+<!--Footer / Bottom Nav Bar-->
+<%- include ../partials/bottom_nav.ejs %> 
+
+  <!--Script Files-->
+<%- include ../partials/footer.ejs %> 
+</body>
+</html>
+

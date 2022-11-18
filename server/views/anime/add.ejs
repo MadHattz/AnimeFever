@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <!--CSS Files-->
+  <link rel='stylesheet' href='/Content/app.css' />
+  <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' /> <!--Setting boostrap theme, providing the path-->
+  <link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />
+  <!--To activate bootstarp u need a jQuery along with java script-->
+</head>
+<body>
+<!--This is how You Import A file/library-->
+<%- include ../partials/header.ejs %> <!--This includes the header file in partials folder-->
+<!--NavBar-->
+<%- include ../partials/add_nav.ejs %> 
+<!--Adding main_nav root in partials folder, notice it goes after the nav code-->
+<!---NavBar Code end-->
+
+<!--Add Code Starts Here-->
+<div class="container">
+    <div class ="row2">
+        <div class= "col-md-offset-3 col-md-8">
+            <h1><%= title %></h1>
+            <!--Form Add-->
+            <form class="form" method="POST">
+
+                <div class="form-group">
+                    <label for="nameTextField"> Anime Title</label>
+                    <input type = "text" class="form-control"
+                        id="nameTextField"
+                        placeholder="Enter the Anime Title"
+                        name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="genreTextField"> Genre Type</label>
+                    <input type = "text" class="form-control"
+                        id="genreTextField"
+                        placeholder="Enter the Genre Type"
+                        name="Genre" required>
+                </div>
+                <div class="form-group">
+                    <label for="ratingTextField"> Rating</label>
+                    <input type = "text" class="form-control"
+                        id="ratingTextField"
+                        placeholder="Enter the Rating/Score"
+                        name="Rating" required>
+                </div>
+                <div class="form-group">
+                    <label for="seasonTextField"> Season Count</label>
+                    <input type = "text" class="form-control"
+                        id="seasonTextField"
+                        placeholder="Enter the Number of Seasons"
+                        name="Seasons" required>
+                </div>
+                <div class="form-group">
+                    <label for="airedTextField"> Date Aired</label>
+                    <input type = "text" class="form-control"
+                        id="airedTextField"
+                        placeholder="Enter the Date it Aired"
+                        name="Aired" required>
+                </div>
+                <div class="form-group">
+                    <label for="descriptionTextField"> Anime Description</label>
+                    <textarea type = "text" class="form-control"
+                        id="descriptionTextField"
+                        placeholder="Enter the Anime Description"
+                        name="Description" required></textarea>
+                </div>
+                <br>
+                <!--Submit & Cancel Buttons-->
+                <button class="btn btn-primary" type="submit">
+                <i class="fa-solid fa-check"></i> Submit
+                </button>
+                <a href="/animelist" class="btn btn-warning">
+                <i class="fas fa-undo"></i> Cancel</a>
+                </form>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+ <!--Footer Img-->
+<div class="Footer">
+<footer >
+    <img src="../Assets/animebanner.jpg" class="img-fluid "style="width: 100%;" alt="Banner Img">
+</footer>
+</div>
+<br>
+<!--Footer / Bottom Nav Bar-->
+<%- include ../partials/bottom_nav.ejs %> 
+
+  <!--Script Files-->
+<%- include ../partials/footer.ejs %> 
+</body>
+</html>

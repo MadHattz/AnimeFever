@@ -1,0 +1,52 @@
+<!--NavBar-->
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+  <div class="container-fluid ">
+    <a class="navbar-brand " href="/"><img src="Assets/sasuke.jpg" height="50px" width="50px" class="img-fluid "></i> Anime Fever
+    </a>
+    <button class="navbar-toggler sticky-sm-top" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0"><!--boostrap 5 u use 'ms-auto', in bootstrap 4 you use ml-auto--->
+      <!--ms-auto makes navbar move right-->
+        <li class="nav-item">
+        <% if (title  == "Anime Fever") { %>
+          <a class="nav-link active"  href="/home">
+        <% } else {%>
+          <a class="nav-link"  href="/home">
+        <% } %>
+          <i class="fa-sharp fa-lg fa-solid fa-house-crack"></i> Home</a>
+        </li>
+
+        <li class="nav-item">
+        <% if (title  == "Top10 Anime") { %>
+          <a class="nav-link active"  href="/animelist">
+        <% } else {%>
+          <a class="nav-link"  href="/animelist">
+        <% } %>
+          <i class="fa-solid fa-hand-fist"></i> Top10 Anime</a>
+        </li>
+
+        <li class="nav-item">
+        <% if (title  == "Trending") { %>
+          <a class="nav-link active"  href="/trending">
+        <% } else {%>
+         <a class="nav-link"  href="/trending">
+        <% } %>
+          <i class="fa-solid fa-arrow-trend-up"></i> Trending</a>
+        </li>
+
+
+        <li class="nav-item">
+        <% if (title  == "Contact Me") { %>
+          <a class="nav-link active "  href="/contact">
+        <% } else {%>
+        <a class="nav-link"  href="/contact">
+        <% } %>
+          <i class="fa-solid fa-file-signature"></i> Contact</a>
+        </li>
+        </ul>
+       
+    </div>
+  </div>
+</nav>
