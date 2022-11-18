@@ -90,7 +90,7 @@ module.exports.processEditPage = (req,res,next)=>{
 //Delete Operation
 module.exports.performDeleteOperation = (req,res,next)=>{
     let id = req.params.id;
-    Anime.deleteOne({__id:id},(err) => {
+    Anime.deleteOne({_id:id},(err) => {
         if (err){
             console.log(err);
             res.end(err);
